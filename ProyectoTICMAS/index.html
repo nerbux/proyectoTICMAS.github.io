@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/f9e5c1f544.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/estilos.css">
+    <script src="javascript/java.js"></script>
+
+    <title>Curriculum Vitae</title>
+</head>
+<body>
+    <div class="contenedor">
+        <header>
+            <nav>
+                <div><a  href="#" onclick="mostrarPresentacion()">Presentación</a></div>
+                <div><a  href="#" onclick="mostrarExperiencia()">Experiencia laboral</a></div>
+                <div><a  href="#" onclick="mostrarHabilidades()">Habilidades</a></div>
+                <div><a  href="#" onclick="mostrarContacto()">Contacto</a></div>
+            </nav>
+        </header>
+        <main>
+            <div class="main-left">
+                <img src="images/foto_perfil.jpg" alt="Foto perfil">
+                <article>
+                    <div>
+                        <h3>Dirección</h3>
+                        <p id="direccion">Gelly y Obes 121</p>
+                        <p id="localidad">San Miguel</p>
+                    </div>
+                    <div>
+                        <h3>Telefono</h3>
+                        <p id="telefono">+54 11 49728346</p>
+                    </div>
+                    <div>
+                        <h3>E-mail</h3>
+                        <p id="email">hernan.giacobini@gmail.com</p>
+                    </div>
+                </article>
+
+            </div>
+            <div class="main-right">
+                <article class="art-presentacion" id="presentacion">
+                    <p class="descripcion">Profesional de la administración contable con más de 5 años de Experiencia
+                        enfocados en buscar la eficiencia de los procesos burocráticos y de distribución de información 
+                        de la empresa, reduciendo los tiempos para cada acción y disminuyendo los gastos totales de la empresa
+                        en más de un 10% durante el último año. Busco formar parte del equipo de EPOS Spain para poder
+                        seguir desarrollándome profesionalmente a nivel internacional, contribuyendo con mis conocimientos
+                        de cara a la comunicación entre distintos departamentos.
+                    </p>
+                </article>
+                <article class="art-experiencia" style="display: none;" id="experiencia">
+                    <div class="contenedor-exp">
+                        <div class="exp">
+                            <div class="exp-col1">
+                                <p>2017-01 - 2020-09</p>
+                            </div>
+                            <div class="exp-col2">
+                                <div><h2>Administrativo contable</h2>
+                                    <p>AITORIN PETANT SL.</p>
+                                    <ul>
+                                        <li>Gestión de facturación y contabilidad</li>
+                                        <li>Pago de impuestos trimestrales y anuales</li>
+                                        <li>Contacto con proveedores de forma semanal</li>
+                                        <li>Planificación de los presupuestos anuales para cada departamento</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="exp">
+                            <div class="exp-col1">
+                                <p>2015-07 - 2016-12</p>
+                            </div>
+                            <div class="exp-col2">
+                                <div><h2>Administrativo</h2>
+                                    <p>TIPSA</p>
+                                    <ul>
+                                        <li>Gestión de pagos de nóminas y finiquitos a los trabajadores</li>
+                                        <li>Elaboración de contratos para nuevos empleados</li>
+                                        <li>Gestión de la comunicación interna de la empresa</li>
+                                        <li>Planificación de eventos trimestrales</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                <article class="art-habilidades" style="display: none;" id="habilidades">
+                    <div>
+                        <h2 id="hab">Habilidades</h2>
+                        <h3 class="habilidades-left">Organización</h3>
+                        <div class="barra_habilidades"><div class="progreso_habilidades" id="progreso_org"></div></div>
+                        <h3 class="habilidades-left">Comunicación</h3>
+                        <div class="barra_habilidades"><div class="progreso_habilidades" id="progreso_com"></div></div>
+                        <h3 class="habilidades-left">Trabajo en equipo</h3>
+                        <div class="barra_habilidades"><div class="progreso_habilidades" id="progreso_tra"></div></div>
+                        <h3 class="habilidades-left">Habilidades informáticas</h3>
+                        <div class="barra_habilidades"><div class="progreso_habilidades" id="progreso_hab_inf"></div></div>
+                        <h3 class="habilidades-left">Conocimiento de inglés</h3>
+                        <div class="barra_habilidades"><div class="progreso_habilidades" id="progreso_ing"></div></div>
+                        <h3 class="habilidades-left">Análisis e interpretación de datos</h3>
+                        <div class="barra_habilidades"><div class="progreso_habilidades" id="progreso_ana_dat"></div></div>
+                        <h3 class="habilidades-left">Conocimientos de contabilidad</h3>
+                        <div class="barra_habilidades"><div class="progreso_habilidades" id="progreso_cont"></div></div>
+                    </div>
+                </article>
+                <article class="art-contacto" style="display: none;" id="contacto">
+                    <form class="form-contacto">
+                        <p>FORMULARIO DE CONTACTO</p><br>
+                        <input id="txtNombre" type="text" placeholder="nombre"><br><br>
+                        <input id="txtApellido" type="text" placeholder="apellido"><br><br>
+                        <input id="txtMail" type="email" placeholder="e-mail"><br><br>
+                        <textarea id="txtAsunto" cols="30" rows="10" placeholder="Indique el motivo de su consulta"></textarea><br>
+                        <button value="Enviar" id="btn_enviar" onclick="guardarDatos()">Enviar</button>
+                    </form>
+                </article>
+            </div>
+        </main>
+        <footer>
+            <div class="redes">
+                <a href="https://www.facebook.com/hernan.giacobini/" target="_blank" class="facebook icon" id="link-facebook"><i class="fa-brands fa-facebook fa-2xl"></i></a>
+                <a href="https://www.instagram.com/hernangiacobini/" target="_blank" class="instagram icon" id="link-instagram"><i class="fa-brands fa-square-instagram fa-2xl"></i></a>
+                <a href="https://www.linkedin.com/in/hernan-giacobini-1069a8251/" target="_blank" class="mail icon" id="link-mail"><i class="fa-brands fa-linkedin fa-2xl"></i></a>
+            </div>
+            <div class="derechos">Copyright 2023 - Todos los derechos reservados</div>
+        </footer>
+    </div>
+
+</body>
+
+</script>
+</html>
